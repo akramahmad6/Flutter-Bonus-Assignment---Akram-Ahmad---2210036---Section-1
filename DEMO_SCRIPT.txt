@@ -1,0 +1,32 @@
+Demo script — Coffee Records app
+
+1) Introduction (5–10s)
+- "Hello — this is [Your Name], demoing the Coffee Records Flutter app connected to Firestore."
+
+2) Show app launch (10–15s)
+- Open app home screen, point out "Order Now" and "Coffee Records" navigation.
+
+3) Create a record (20–30s)
+- Tap "Order Now" (or +). Fill Title: "Latte", Amount: "2.50", Description: "Afternoon latte". Tap Save.
+- Show the new item appears in the records list.
+
+4) Verify in Firestore Console (15–20s)
+- Switch to Firebase Console → Firestore → collection `coffee_records`. Show the document and fields (title, des, amount, date).
+
+5) Edit a record (15–20s)
+- Tap a record in the list, change the Title to "Latte (large)", Save, show updated title in app and in Firestore Console.
+
+6) Delete a record (10–15s)
+- Tap the trash icon on a record, confirm deletion. Show the document removed from Firestore Console.
+
+7) Show rules and config (10–15s)
+- Open `firestore.rules` in the project and show it allows read/write (development only).
+- Show `android/app/google-services.json` exists and `lib/firebase_options.dart` is configured.
+
+8) Closing (5–10s)
+- "That's the demo: CRUD operations working in real-time with Firestore. Thank you."
+
+Tips:
+- Narrate each step clearly. Keep the video ~2–4 minutes.
+- Record full-screen app and quick switch to browser for Firestore Console.
+

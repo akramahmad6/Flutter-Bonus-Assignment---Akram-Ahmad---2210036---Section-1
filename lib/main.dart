@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:summer_iub_app/firebase_options.dart';
 import 'package:summer_iub_app/screens/home.dart';
+import 'package:summer_iub_app/screens/coffe_records_screen.dart';
 import 'package:summer_iub_app/state_management/coffee_state_management.dart';
 
 Future<void> main() async {
@@ -30,7 +31,9 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.brown),
         ),
-        home: const HomePage(pageTitle: 'Welcome to CSE464!'),
+        // For demo purposes open the records screen so Firestore stream
+        // subscribes immediately and logs snapshot updates.
+        home: const CoffeRecordsScreen(),
       ),
     );
   }

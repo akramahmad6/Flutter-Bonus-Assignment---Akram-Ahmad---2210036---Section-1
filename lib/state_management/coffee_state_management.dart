@@ -22,7 +22,15 @@ class CoffeeStateManagement with ChangeNotifier {
       return _localRecordsStream();
     }
     return _records.orderBy('date', descending: true).snapshots().map(
-      (snapshot) => snapshot.docs.map(CoffeeRecordsModel.fromFirestore).toList(),
+      (snapshot) {
+        // Debug: print snapshot counts when in debug mode so running logs
+        // show real-time updates during demo.
+        if (!kReleaseMode) {
+          // ignore: avoid_print
+          print('Firestore snapshot: ${snapshot.docs.length} docs');
+        }
+        return snapshot.docs.map(CoffeeRecordsModel.fromFirestore).toList();
+      },
     );
   }
 
